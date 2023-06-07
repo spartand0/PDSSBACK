@@ -6,5 +6,4 @@ module.exports = {
   restoreMocks: true,
   coverageDirectory: 'coverage',
   coverageReporters: ['lcov', 'cobertura'],
-  coveragePathIgnorePatterns: ['node_modules', 'src/config', 'src/app.js', 'tests'],
 };
