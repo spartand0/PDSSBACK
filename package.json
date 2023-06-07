@@ -11,7 +11,7 @@
     "build:prod": " cp src/environment/.prod.env .env  && cross-env NODE_ENV=production  node ./bin/www ",
     "deploy:dev": "pm2 start ecosystem.config.json --only PDSS_API_DEVELOP",
     "deploy:prod": "pm2 start ecosystem.config.json --only PDSS_API_PRODUCTION",
-    "test": "jest -i --colors --verbose --detectOpenHandles",
+    "test": "jest -i --colors --verbose --detectOpenHandles --coverage",
     "test:watch": "jest -i --watchAll"
 
   },
