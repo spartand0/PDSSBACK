@@ -4,16 +4,15 @@
   "description": "",
   "main": "www",
   "scripts": {
-    "start": " cp src/environment/.local.env .env  && cross-env NODE_ENV=locale  node ./bin/www ",
+    "start": "cross-env NODE_ENV=locale  node ./bin/www ",
     "dev": " nodemon --exec npm start  nodemon --ignore 'src/uploads/*'   ",
     "lint": "eslint --ext .js,.vue src test/unit",
     "build:dev": " cp src/environment/.dev.env .env  && cross-env NODE_ENV=development  node ./bin/www ",
     "build:prod": " cp src/environment/.prod.env .env  && cross-env NODE_ENV=production  node ./bin/www ",
     "deploy:dev": "pm2 start ecosystem.config.json --only PDSS_API_DEVELOP",
     "deploy:prod": "pm2 start ecosystem.config.json --only PDSS_API_PRODUCTION",
-    "test": "jest -i --colors --verbose --detectOpenHandles --coverage",
+    "test": "jest --coverage",
     "test:watch": "jest -i --watchAll"
-
   },
   "keywords": [],
   "author": "",
@@ -43,7 +42,8 @@
     "validator": "^13.7.0"
   },
   "devDependencies": {
-    "jest": "^26.0.1",
+    "jest": "^26.6.3",
+    "jest-sonar-reporter": "^2.0.0",
     "supertest": "^6.0.1"
   }
 }

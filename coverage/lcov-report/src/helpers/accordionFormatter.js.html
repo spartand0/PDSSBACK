@@ -1,0 +1,430 @@
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Code coverage report for src/helpers/accordionFormatter.js</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../../prettify.css" />
+    <link rel="stylesheet" href="../../base.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="../../favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(../../sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+    
+<body>
+<div class='wrapper'>
+    <div class='pad1'>
+        <h1><a href="../../index.html">All files</a> / <a href="index.html">src/helpers</a> accordionFormatter.js</h1>
+        <div class='clearfix'>
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">100% </span>
+                <span class="quiet">Statements</span>
+                <span class='fraction'>76/76</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">80% </span>
+                <span class="quiet">Branches</span>
+                <span class='fraction'>8/10</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">100% </span>
+                <span class="quiet">Functions</span>
+                <span class='fraction'>6/6</span>
+            </div>
+        
+            
+            <div class='fl pad1y space-right2'>
+                <span class="strong">100% </span>
+                <span class="quiet">Lines</span>
+                <span class='fraction'>76/76</span>
+            </div>
+        
+            
+        </div>
+        <p class="quiet">
+            Press <em>n</em> or <em>j</em> to go to the next uncovered block, <em>b</em>, <em>p</em> or <em>k</em> for the previous block.
+        </p>
+        <template id="filterTemplate">
+            <div class="quiet">
+                Filter:
+                <input oninput="onInput()" type="search" id="fileSearch">
+            </div>
+        </template>
+    </div>
+    <div class='status-line high'></div>
+    <pre><table class="coverage">
+<tr><td class="line-count quiet"><a name='L1'></a><a href='#L1'>1</a>
+<a name='L2'></a><a href='#L2'>2</a>
+<a name='L3'></a><a href='#L3'>3</a>
+<a name='L4'></a><a href='#L4'>4</a>
+<a name='L5'></a><a href='#L5'>5</a>
+<a name='L6'></a><a href='#L6'>6</a>
+<a name='L7'></a><a href='#L7'>7</a>
+<a name='L8'></a><a href='#L8'>8</a>
+<a name='L9'></a><a href='#L9'>9</a>
+<a name='L10'></a><a href='#L10'>10</a>
+<a name='L11'></a><a href='#L11'>11</a>
+<a name='L12'></a><a href='#L12'>12</a>
+<a name='L13'></a><a href='#L13'>13</a>
+<a name='L14'></a><a href='#L14'>14</a>
+<a name='L15'></a><a href='#L15'>15</a>
+<a name='L16'></a><a href='#L16'>16</a>
+<a name='L17'></a><a href='#L17'>17</a>
+<a name='L18'></a><a href='#L18'>18</a>
+<a name='L19'></a><a href='#L19'>19</a>
+<a name='L20'></a><a href='#L20'>20</a>
+<a name='L21'></a><a href='#L21'>21</a>
+<a name='L22'></a><a href='#L22'>22</a>
+<a name='L23'></a><a href='#L23'>23</a>
+<a name='L24'></a><a href='#L24'>24</a>
+<a name='L25'></a><a href='#L25'>25</a>
+<a name='L26'></a><a href='#L26'>26</a>
+<a name='L27'></a><a href='#L27'>27</a>
+<a name='L28'></a><a href='#L28'>28</a>
+<a name='L29'></a><a href='#L29'>29</a>
+<a name='L30'></a><a href='#L30'>30</a>
+<a name='L31'></a><a href='#L31'>31</a>
+<a name='L32'></a><a href='#L32'>32</a>
+<a name='L33'></a><a href='#L33'>33</a>
+<a name='L34'></a><a href='#L34'>34</a>
+<a name='L35'></a><a href='#L35'>35</a>
+<a name='L36'></a><a href='#L36'>36</a>
+<a name='L37'></a><a href='#L37'>37</a>
+<a name='L38'></a><a href='#L38'>38</a>
+<a name='L39'></a><a href='#L39'>39</a>
+<a name='L40'></a><a href='#L40'>40</a>
+<a name='L41'></a><a href='#L41'>41</a>
+<a name='L42'></a><a href='#L42'>42</a>
+<a name='L43'></a><a href='#L43'>43</a>
+<a name='L44'></a><a href='#L44'>44</a>
+<a name='L45'></a><a href='#L45'>45</a>
+<a name='L46'></a><a href='#L46'>46</a>
+<a name='L47'></a><a href='#L47'>47</a>
+<a name='L48'></a><a href='#L48'>48</a>
+<a name='L49'></a><a href='#L49'>49</a>
+<a name='L50'></a><a href='#L50'>50</a>
+<a name='L51'></a><a href='#L51'>51</a>
+<a name='L52'></a><a href='#L52'>52</a>
+<a name='L53'></a><a href='#L53'>53</a>
+<a name='L54'></a><a href='#L54'>54</a>
+<a name='L55'></a><a href='#L55'>55</a>
+<a name='L56'></a><a href='#L56'>56</a>
+<a name='L57'></a><a href='#L57'>57</a>
+<a name='L58'></a><a href='#L58'>58</a>
+<a name='L59'></a><a href='#L59'>59</a>
+<a name='L60'></a><a href='#L60'>60</a>
+<a name='L61'></a><a href='#L61'>61</a>
+<a name='L62'></a><a href='#L62'>62</a>
+<a name='L63'></a><a href='#L63'>63</a>
+<a name='L64'></a><a href='#L64'>64</a>
+<a name='L65'></a><a href='#L65'>65</a>
+<a name='L66'></a><a href='#L66'>66</a>
+<a name='L67'></a><a href='#L67'>67</a>
+<a name='L68'></a><a href='#L68'>68</a>
+<a name='L69'></a><a href='#L69'>69</a>
+<a name='L70'></a><a href='#L70'>70</a>
+<a name='L71'></a><a href='#L71'>71</a>
+<a name='L72'></a><a href='#L72'>72</a>
+<a name='L73'></a><a href='#L73'>73</a>
+<a name='L74'></a><a href='#L74'>74</a>
+<a name='L75'></a><a href='#L75'>75</a>
+<a name='L76'></a><a href='#L76'>76</a>
+<a name='L77'></a><a href='#L77'>77</a>
+<a name='L78'></a><a href='#L78'>78</a>
+<a name='L79'></a><a href='#L79'>79</a>
+<a name='L80'></a><a href='#L80'>80</a>
+<a name='L81'></a><a href='#L81'>81</a>
+<a name='L82'></a><a href='#L82'>82</a>
+<a name='L83'></a><a href='#L83'>83</a>
+<a name='L84'></a><a href='#L84'>84</a>
+<a name='L85'></a><a href='#L85'>85</a>
+<a name='L86'></a><a href='#L86'>86</a>
+<a name='L87'></a><a href='#L87'>87</a>
+<a name='L88'></a><a href='#L88'>88</a>
+<a name='L89'></a><a href='#L89'>89</a>
+<a name='L90'></a><a href='#L90'>90</a>
+<a name='L91'></a><a href='#L91'>91</a>
+<a name='L92'></a><a href='#L92'>92</a>
+<a name='L93'></a><a href='#L93'>93</a>
+<a name='L94'></a><a href='#L94'>94</a>
+<a name='L95'></a><a href='#L95'>95</a>
+<a name='L96'></a><a href='#L96'>96</a>
+<a name='L97'></a><a href='#L97'>97</a>
+<a name='L98'></a><a href='#L98'>98</a>
+<a name='L99'></a><a href='#L99'>99</a>
+<a name='L100'></a><a href='#L100'>100</a>
+<a name='L101'></a><a href='#L101'>101</a>
+<a name='L102'></a><a href='#L102'>102</a>
+<a name='L103'></a><a href='#L103'>103</a>
+<a name='L104'></a><a href='#L104'>104</a>
+<a name='L105'></a><a href='#L105'>105</a>
+<a name='L106'></a><a href='#L106'>106</a>
+<a name='L107'></a><a href='#L107'>107</a>
+<a name='L108'></a><a href='#L108'>108</a>
+<a name='L109'></a><a href='#L109'>109</a>
+<a name='L110'></a><a href='#L110'>110</a>
+<a name='L111'></a><a href='#L111'>111</a>
+<a name='L112'></a><a href='#L112'>112</a>
+<a name='L113'></a><a href='#L113'>113</a>
+<a name='L114'></a><a href='#L114'>114</a>
+<a name='L115'></a><a href='#L115'>115</a>
+<a name='L116'></a><a href='#L116'>116</a></td><td class="line-coverage quiet"><span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">18x</span>
+<span class="cline-any cline-yes">18x</span>
+<span class="cline-any cline-yes">136x</span>
+<span class="cline-any cline-yes">136x</span>
+<span class="cline-any cline-yes">136x</span>
+<span class="cline-any cline-yes">586x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">136x</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">136x</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">136x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">18x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-yes">76x</span>
+<span class="cline-any cline-yes">76x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">10x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">2x</span></td><td class="text"><pre class="prettyprint lang-js">const formatAccordionData = data =&gt; {
+	let lexicon_nouns = data['Lexikon: Nomen']
+	lexicon_nouns.head = data['Lexikon: Nomen'].head;
+	lexicon_nouns.values = dataLabel(data['Lexikon: Nomen'].values, "name");
+&nbsp;
+	let lexicon_verbs = data['Lexikon: Verben'];
+	lexicon_verbs.head = data['Lexikon: Verben'].head;
+	lexicon_verbs.values = dataLabel(data['Lexikon: Verben'].values, "name");
+&nbsp;
+	let phonetic_context_processes = data['Aussprache: Kontextprozesse'];
+	phonetic_context_processes.head = data['Aussprache: Kontextprozesse'].head;
+	phonetic_context_processes.values = dataLabel(data['Aussprache: Kontextprozesse'].values, "questionId");
+&nbsp;
+	let phonetic_wordstructure_stressed = data['Aussprache: Veränderung der Wortstruktur und Wortbetonung'];
+	phonetic_wordstructure_stressed.head = data['Aussprache: Veränderung der Wortstruktur und Wortbetonung'].head;
+	phonetic_wordstructure_stressed.values = dataValue(data['Aussprache: Veränderung der Wortstruktur und Wortbetonung'].values);
+&nbsp;
+	let phonetic_truncations = data['Aussprache: Trunkierung von Mehrsilbern durch Silbenauslassung'];
+	phonetic_truncations.head = data['Aussprache: Trunkierung von Mehrsilbern durch Silbenauslassung'].head;
+	phonetic_truncations.class = data['Aussprache: Trunkierung von Mehrsilbern durch Silbenauslassung'].class;
+	phonetic_truncations.values = dataLabel(data['Aussprache: Trunkierung von Mehrsilbern durch Silbenauslassung'].values, "name");
+&nbsp;
+	let phonetic_syllable_structures = data['Aussprache: Silbenstrukturprozesse'];
+	phonetic_syllable_structures.head = data['Aussprache: Silbenstrukturprozesse'].head;
+	phonetic_syllable_structures.values = dataValue(data['Aussprache: Silbenstrukturprozesse'].values);
+&nbsp;
+	let phonetic_consonant_structures = data['Aussprache: Genauere Darstellung der Veränderungen bei Konsonantenverbindungen und Affrikaten (initial und final)'];
+	phonetic_consonant_structures.head = data['Aussprache: Genauere Darstellung der Veränderungen bei Konsonantenverbindungen und Affrikaten (initial und final)'].head;
+	phonetic_consonant_structures.values = dataValue(data['Aussprache: Genauere Darstellung der Veränderungen bei Konsonantenverbindungen und Affrikaten (initial und final)'].values);
+&nbsp;
+	let phonetic_substitutions_consonants = data['Aussprache: Analyse der Substitutionsprozesse bei Konsonanten'];
+	phonetic_substitutions_consonants.head = data['Aussprache: Analyse der Substitutionsprozesse bei Konsonanten'].head;
+	phonetic_substitutions_consonants.values = dataLabel(data['Aussprache: Analyse der Substitutionsprozesse bei Konsonanten'].values, "name");
+&nbsp;
+	let phonetic_substitutions_vowels = data['Aussprache: Substitution bei Vokalen'];
+	phonetic_substitutions_vowels.head = data['Aussprache: Substitution bei Vokalen'].head;
+	phonetic_substitutions_vowels.class = data['Aussprache: Substitution bei Vokalen'].class;
+	phonetic_substitutions_vowels.values = dataLabel(data['Aussprache: Substitution bei Vokalen'].values, "name");
+&nbsp;
+	let phonetic_substitution_processes = data['Aussprache: Übersicht über Substitutionsprozesse bei Einzelkonsonanten und in Konsonantenverbindungen'];
+	phonetic_substitution_processes.head = data['Aussprache: Übersicht über Substitutionsprozesse bei Einzelkonsonanten und in Konsonantenverbindungen'].head;
+	phonetic_substitution_processes.values = dataValue(data['Aussprache: Übersicht über Substitutionsprozesse bei Einzelkonsonanten und in Konsonantenverbindungen'].values);
+&nbsp;
+	let phonetic_sound_preference = data['Aussprache: Lautpräferenz und funktionale Belastung'];
+	phonetic_sound_preference.head = data['Aussprache: Lautpräferenz und funktionale Belastung'].head;
+	phonetic_sound_preference.values = dataValue(data['Aussprache: Lautpräferenz und funktionale Belastung'].values);
+&nbsp;
+	let phonetic_deformity = data['Aussprache: Phonetische Realisierung / Fehlbildungen'];
+	phonetic_deformity.head = data['Aussprache: Phonetische Realisierung / Fehlbildungen'].head;
+	phonetic_deformity.values = dataLabel(data['Aussprache: Phonetische Realisierung / Fehlbildungen'].values, "name");
+&nbsp;
+	let accentuation_change = data['Aussprache: Betonungsveränderungen'];
+	accentuation_change.head = data['Aussprache: Betonungsveränderungen'].head;
+	accentuation_change.values = dataLabel(data['Aussprache: Betonungsveränderungen'].values, "name");
+&nbsp;
+	let not_evaluable = data['Nicht auswertbare Wörter'];
+	not_evaluable.head = data['Nicht auswertbare Wörter'].head;
+	not_evaluable.values = dataLabel(data['Nicht auswertbare Wörter'].values, "name");
+&nbsp;
+	return {
+		"Lexikon: Nomen": lexicon_nouns,
+		"Lexikon: Verben": lexicon_verbs,
+		"Aussprache: Kontextprozesse": phonetic_context_processes,
+		"Aussprache: Veränderung der Wortstruktur und Wortbetonung": phonetic_wordstructure_stressed,
+		"Aussprache: Trunkierung von Mehrsilbern durch Silbenauslassung": phonetic_truncations,
+		"Aussprache: Silbenstrukturprozesse": phonetic_syllable_structures,
+		"Aussprache: Genauere Darstellung der Veränderungen bei Konsonantenverbindungen und Affrikaten (initial und final)": phonetic_consonant_structures,
+		"Aussprache: Analyse der Substitutionsprozesse bei Konsonanten": phonetic_substitutions_consonants,
+		"Aussprache: Substitution bei Vokalen": phonetic_substitutions_vowels,
+		"Aussprache: Übersicht über Substitutionsprozesse bei Einzelkonsonanten und in Konsonantenverbindungen": phonetic_substitution_processes,
+		"Aussprache: Lautpräferenz und funktionale Belastung": phonetic_sound_preference,
+		"Aussprache: Phonetische Realisierung / Fehlbildungen": phonetic_deformity,
+		"Aussprache: Betonungsveränderungen": accentuation_change,
+		"Nicht auswertbare Wörter": not_evaluable
+	}
+&nbsp;
+}
+function dataLabel(data, label) {
+	const values = (data.length &gt; 0) ? {} : <span class="branch-1 cbranch-no" title="branch not covered" >[];</span>
+	data.forEach((item) =&gt; {
+		const name = item[label]
+		const itemValues = {};
+		Object.keys(item).forEach((key) =&gt; {
+			itemValues[key] = item[key];
+		});
+		if (itemValues.target) {
+			let target = JSON.stringify(itemValues.target)
+			target = target.replace('\n', '');
+			target = target.replace('"', '"');
+			target = target.replace('  ', '');
+			target = target.replace('&gt; &lt;', '&gt;&lt;');
+			itemValues.target = target.replace('"&lt;', '&lt;');
+			itemValues.target = itemValues.target.replace('&gt;"', '&gt;');
+		}
+		if (itemValues.realized_as) {
+			let realized_as = JSON.stringify(itemValues.realized_as)
+			realized_as = realized_as.replace('\n', '');
+			realized_as = realized_as.replace('"', '"');
+			realized_as = realized_as.replace('  ', '');
+			realized_as = realized_as.replace('&gt; &lt;', '&gt;&lt;');
+			itemValues.realized_as = realized_as.replace('"&lt;', '&lt;');
+			itemValues.realized_as = itemValues.realized_as.replace('&gt;"', '&gt;');
+		}
+		values[name] = { ...itemValues };
+	});
+	return values;
+}
+function dataValue(data) {
+	const values = (data.length &gt; 0) ? {} : <span class="branch-1 cbranch-no" title="branch not covered" >[];</span>
+	data.forEach((item) =&gt; {
+		const name = item.name
+		values[name] = (item.value) ? [item.value] : [item.replaced, item.affection];
+	});
+	return values;
+}
+module.exports = formatAccordionData;</pre></td></tr></table></pre>
+
+                <div class='push'></div><!-- for sticky footer -->
+            </div><!-- /wrapper -->
+            <div class='footer quiet pad2 space-top1 center small'>
+                Code coverage generated by
+                <a href="https://istanbul.js.org/" target="_blank" rel="noopener noreferrer">istanbul</a>
+                at 2023-06-07T12:19:26.893Z
+            </div>
+        <script src="../../prettify.js"></script>
+        <script>
+            window.onload = function () {
+                prettyPrint();
+            };
+        </script>
+        <script src="../../sorter.js"></script>
+        <script src="../../block-navigation.js"></script>
+    </body>
+</html>
+    
