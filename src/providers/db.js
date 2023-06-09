@@ -14,17 +14,17 @@ function createPool() {
 		queueLimit: 0
 	});
 
-	pool.on('acquire', function (connection) {
-		console.log('Connection %d acquired', connection.threadId);
-	});
+	// pool.on('acquire', function (connection) {
+	// 	console.log('Connection %d acquired', connection.threadId);
+	// });
 
-	pool.on('enqueue', function () {
-		console.log('Waiting for available connection slot');
-	});
+	// pool.on('enqueue', function () {
+	// 	console.log('Waiting for available connection slot');
+	// });
 
-	pool.on('release', function (connection) {
-		console.log('Connection %d released', connection.threadId);
-	});
+	// pool.on('release', function (connection) {
+	// 	console.log('Connection %d released', connection.threadId);
+	// });
 
 	const promisePool = pool.promise();
 	console.log('+++++++++++++++ Mysql DB  is up +++++++++++++++++++++');

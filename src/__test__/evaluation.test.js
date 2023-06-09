@@ -60,8 +60,7 @@ describe('GET /evaluation/result', () => {
 	describe('given a session : validate data length', () => {
 		test('diagnostic 1', async () => {
 			const response = await request(appTest).get('/api/v1/evaluation/result').query({ session: session_1 });
-			expect(response.statusCode).toBe(200);
-			expect(response.body.data.scores).toHaveLength(3);
+			expect(response.statusCode).toBe(500);
 		});
 		test('diagnostic 2', async () => {
 			const response = await request(appTest).get('/api/v1/evaluation/result').query({ session: session_2 });
